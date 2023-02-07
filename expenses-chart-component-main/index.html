@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Expenses chart component</title>
+</head>
+
+<body>
+  <header>
+    <div>
+      <p>
+        My balance
+      </p>
+      <p>
+        $921.48
+      </p>
+    </div>
+    <img src="./images/logo.svg" alt="">
+  </header>
+  <main>
+    <div>
+      <div class="spending">
+        Spending - Last 7 days
+      </div>
+      <ul>
+        <li>
+          <div class="details">t</div>
+          <div style="--order: 1" class="red mon" data-value="mon"></div>
+          mon
+        </li>
+        <li>
+          <div class="details">t</div>
+          <div style="--order: 2" class="red tue" data-value="tue"></div>
+          tue
+        </li>
+        <li>
+          <div class="details">t</div>
+          <div style="--order: 3" class="red wed" data-value="wed"></div>
+          wed
+        </li>
+        <li>
+          <div class="details">t</div>
+          <div style="--order: 4" class="red thur" data-value="thur"></div>
+          thu
+        </li>
+        <li>
+          <div class="details">t</div>
+          <div style="--order: 5" class="red fri" data-value="fri"></div>
+          fri
+        </li>
+        <li>
+          <div class="details">t</div>
+          <div style="--order: 6" class="red sat" data-value="sat"></div>
+          sat
+        </li>
+        <li>
+          <div class="details">t</div>
+          <div style="--order: 7" class="red sun" data-value="sun"></div>
+          sun
+        </li>
+      </ul>
+      <div class="total">
+        <p>Total this month</p>
+        <p>
+          $478.33
+        </p>
+        <div>
+          <p> +2.4%</p>
+          <p> from last month</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="data.js" type="module"></script>
+  <script src="script.js" type="module"></script>
+</body>
+
+</html>

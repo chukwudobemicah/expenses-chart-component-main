@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=DM+Sans:wght@400;700&family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Josefin+Sans:wght@300;400;600&family=Poppins:wght@400;500;600;700&family=Roboto:wght@300&family=Space+Grotesk:wght@500&display=swap');
+/* RESETS*/
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+ul,
+ol {
+  list-style-type: none;
+  padding-left: 0;
+}
+:root {
+  --Soft-red: hsl(10, 79%, 65%);
+  --Cyan: hsl(186, 34%, 60%);
+  --Dark-brown: hsl(27, 41%, 9%);
+  --Medium-brown: hsl(28, 10%, 53%);
+  --Cream: hsl(27, 66%, 92%);
+  --Very-pale-orange: hsl(33, 100%, 98%);
+}
+/* STYLES */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--Cream);
+  font-family: 'Barlow', sans-serif;
+  font-family: 'DM Sans', sans-serif;
+  font-family: 'Fraunces', serif;
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.125rem;
+}
+header,
+main {
+  width: clamp(340px, 90%, 340px);
+  box-shadow: 0px 10px 10px 10px rgba(51, 51, 51, 0.176);
+}
+header {
+  background-color: var(--Soft-red);
+  height: 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5rem;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 7500;
+}
+
+main {
+  background-color: #fff;
+  margin-top: 1rem;
+  padding: 13px;
+  border-radius: 10px;
+}
+main ul {
+  display: flex;
+  gap: 0.7rem;
+  height: 10rem;
+  cursor: pointer;
+}
+.red,
+.cyan {
+  width: 35px;
+  border-radius: 5px;
+  transition: animation 1s ease-in;
+  animation: graph-animation 1s ease-in;
+  animation-delay: calc(var(--order) * 150ms);
+}
+.red {
+  background-color: var(--Soft-red);
+  height: 50px;
+}
+.cyan {
+  height: 100px;
+  background-color: var(--Cyan);
+}
+li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  font-size: 0.65rem;
+}
+.spending {
+  font-size: 1.3rem;
+  color: var(--Dark-brown);
+  margin-bottom: 0.5rem;
+  font-weight: 900;
+}
+.total {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid var(--Medium-brown);
+  margin-top: 1.5rem;
+}
+.total p:nth-child(1) {
+  grid-column: span 2;
+  display: flex;
+  align-items: flex-end;
+}
+.total div {
+  display: flex;
+  flex-direction: column;
+  justify-items: end;
+  align-items: end;
+}
+.total div p:nth-child(1),
+.total > p:nth-child(2) {
+  font-weight: 900;
+}
+.details {
+  width: 100%;
+  height: 30px;
+  background-color: var(--Dark-brown);
+  color: #fff;
+  margin-bottom: 7px;
+  text-align: center;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hidden {
+  display: none;
+}
+@keyframes graph-animation {
+  25% {
+    transform: translateY(-60%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
