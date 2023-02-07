@@ -16,7 +16,7 @@ const [monData, tueData, wedData, thurData, friData, satData, sunData] =
 const weekdays = ['mon', 'tue', 'wed', 'thur', 'fri', 'sat', 'sun'];
 const date = new Date();
 const day = date.getDay();
-const now = weekdays[day];
+const now = weekdays[day - 1];
 
 const generateDynamicGraph = function (day, data) {
   day.style.height = `${data.amount * 2}px`;
