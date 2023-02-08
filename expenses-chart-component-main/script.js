@@ -26,29 +26,38 @@ const generateDynamicGraph = function (day, data) {
   }
 };
 // const daysArr = [mon, tue, wed, thur, fri, sat, sun];
-const fillDetails = function (day, data) {
+const gatDynamicDetails = function (day, data) {
   day.addEventListener('mouseover', function () {
     day.previousElementSibling.textContent = `${data.amount}`;
     day.previousElementSibling.classList.remove('hidden');
-    day.closest('li').style.opacity = 0.5;
+    day.closest('li').style.opacity = 0.7;
   });
   day.addEventListener('mouseleave', function () {
     day.previousElementSibling.classList.add('hidden');
     day.closest('li').style.opacity = 1;
   });
 };
-fillDetails(mon, monData);
-fillDetails(tue, tueData);
-fillDetails(wed, wedData);
-fillDetails(thur, thurData);
-fillDetails(fri, friData);
-fillDetails(sat, satData);
-fillDetails(sun, sunData);
 
-generateDynamicGraph(mon, monData);
-generateDynamicGraph(tue, tueData);
-generateDynamicGraph(wed, wedData);
-generateDynamicGraph(thur, thurData);
-generateDynamicGraph(fri, friData);
-generateDynamicGraph(sat, satData);
-generateDynamicGraph(sun, sunData);
+const init = function (day, data) {
+  gatDynamicDetails(day, data);
+  gatDynamicDetails(day, data);
+  gatDynamicDetails(day, data);
+  gatDynamicDetails(day, data);
+  gatDynamicDetails(day, data);
+  gatDynamicDetails(day, data);
+  gatDynamicDetails(day, data);
+  generateDynamicGraph(day, data);
+  generateDynamicGraph(day, data);
+  generateDynamicGraph(day, data);
+  generateDynamicGraph(day, data);
+  generateDynamicGraph(day, data);
+  generateDynamicGraph(day, data);
+  generateDynamicGraph(day, data);
+};
+init(mon, monData);
+init(tue, tueData);
+init(wed, wedData);
+init(thur, thurData);
+init(fri, friData);
+init(sat, satData);
+init(sun, sunData);
