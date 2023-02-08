@@ -40,18 +40,6 @@ const gatDynamicDetails = function (day, data) {
 
 const init = function (day, data) {
   gatDynamicDetails(day, data);
-  gatDynamicDetails(day, data);
-  gatDynamicDetails(day, data);
-  gatDynamicDetails(day, data);
-  gatDynamicDetails(day, data);
-  gatDynamicDetails(day, data);
-  gatDynamicDetails(day, data);
-  generateDynamicGraph(day, data);
-  generateDynamicGraph(day, data);
-  generateDynamicGraph(day, data);
-  generateDynamicGraph(day, data);
-  generateDynamicGraph(day, data);
-  generateDynamicGraph(day, data);
   generateDynamicGraph(day, data);
 };
 init(mon, monData);
