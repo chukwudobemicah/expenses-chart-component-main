@@ -186,15 +186,23 @@ header img {
   animation: logo-animation 1s ease-in;
   transition: animation 1s ease-in;
 }
-@keyframes graph-animation {
+/* @keyframes graph-animation {
   25% {
     transform: translateY(-30%);
   }
   100% {
     transform: translateY(0);
   }
+} */
+@keyframes graph-animation {
+  1% {
+    height: 5px;
+  }
+  100% {
+    height: fit-content;
+  }
 }
-@keyframes logo-animation {
+/* @keyframes logo-animation {
   0% {
     transform: translateX(-50%);
     opacity: 0;
@@ -203,4 +211,4 @@ header img {
     transform: translateX(0);
     opacity: 1;
   }
-}
+} */

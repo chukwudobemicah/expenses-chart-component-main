@@ -15,20 +15,20 @@ const [monData, tueData, wedData, thurData, friData, satData, sunData] =
   dataJson;
 const weekdays = ['mon', 'tue', 'wed', 'thur', 'fri', 'sat', 'sun'];
 const date = new Date();
-const day = date.getDay();
-const now = weekdays[day - 1];
+const getdayNum = date.getDay();
+const today = weekdays[getdayNum - 1];
 
 const generateDynamicGraph = function (day, data) {
   day.style.height = `${data.amount * 2}px`;
   const { value: newDay } = day.dataset;
-  if (newDay === now) {
+  if (newDay === today) {
     day.classList.add('cyan');
   }
 };
 // const daysArr = [mon, tue, wed, thur, fri, sat, sun];
-const gatDynamicDetails = function (day, data) {
+const getDynamicDetails = function (day, data) {
   day.addEventListener('mouseover', function () {
-    day.previousElementSibling.textContent = `${data.amount}`;
+    day.previousElementSibling.textContent = `$${data.amount}`;
     day.previousElementSibling.classList.remove('hidden');
     day.closest('li').style.opacity = 0.7;
   });
@@ -39,7 +39,7 @@ const gatDynamicDetails = function (day, data) {
 };
 
 const init = function (day, data) {
-  gatDynamicDetails(day, data);
+  getDynamicDetails(day, data);
   generateDynamicGraph(day, data);
 };
 init(mon, monData);
